@@ -1,6 +1,7 @@
 # Constants - Testing Commands
 TEST_PYTEST = "pytest --no-header -rA --tb=no -p no:cacheprovider"
 TEST_PYTEST_VERBOSE = "pytest -rA --tb=long -p no:cacheprovider"
+TEST_ASTROPY_NEW_VERSIONS_PYTEST = "pytest -p no:nose --no-header -rA --tb=no -p no:cacheprovider"
 TEST_ASTROPY_PYTEST = "pytest -rA -vv -o console_output_style=classic --tb=no"
 TEST_DJANGO = "./tests/runtests.py --verbosity 2 --settings=test_sqlite --parallel 1"
 TEST_DJANGO_NO_PARALLEL = "./tests/runtests.py --verbosity 2"
@@ -561,7 +562,7 @@ SPECS_ASTROPY = {
             "sortedcontainers==2.4.0",
             "tomli==2.0.1",
         ],
-        "test_cmd": TEST_PYTEST,
+        "test_cmd": TEST_ASTROPY_NEW_VERSIONS_PYTEST,
     }
     for k in ["3.0", "3.1", "3.2", "4.1", "4.2", "4.3", "5.0", "5.1", "5.2", "v5.3"]
 }
